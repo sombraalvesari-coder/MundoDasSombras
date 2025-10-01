@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// Lógica da tela principal de login.
 /// </summary>
-public class TelaLogin : MonoBehaviour
+public class GerenciadorTelaLogin : MonoBehaviour
 {
     public GerenciadorLogin gerenciador;
 

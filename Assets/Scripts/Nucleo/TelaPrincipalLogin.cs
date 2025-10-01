@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 /// Controla a tela de login inicial.
 /// Aqui o jogador informa o nome e escolhe configurações básicas do mundo.
 /// </summary>
-public class TelaLogin : MonoBehaviour
+public class TelaPrincipalLogin : MonoBehaviour
 {
     [Header("Referências da Interface")]
     public InputField campoNomeJogador;

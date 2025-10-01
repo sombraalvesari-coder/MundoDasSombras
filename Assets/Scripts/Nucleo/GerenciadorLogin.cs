@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Gerencia a navegação entre as telas do login.
+/// Controla a exibição dos painéis da tela de login.
 /// </summary>
 public class GerenciadorLogin : MonoBehaviour
 {
@@ -27,21 +27,38 @@ public class GerenciadorLogin : MonoBehaviour
         telaSelecionarPersonagem.SetActive(false);
     }
 
+    /// <summary>
+    /// Esconde todos os painéis.
+    /// </summary>
+    private void EsconderTodos()
+    {
+        painelTelaPrincipal.SetActive(false);
+        painelCarregarMundo.SetActive(false);
+        painelCriarModificacoes.SetActive(false);
+        painelSelecionarPersonagem.SetActive(false);
+    }
+
+    public void AbrirTelaPrincipal()
+    {
+        EsconderTodos();
+        painelTelaPrincipal.SetActive(true);
+    }
+
     public void AbrirTelaCarregarMundo()
     {
-        telaPrincipal.SetActive(false);
-        telaCarregarMundo.SetActive(true);
+        EsconderTodos();
+        painelCarregarMundo.SetActive(true);
     }
 
     public void AbrirTelaModificacoes()
     {
-        telaPrincipal.SetActive(false);
-        telaModificacoes.SetActive(true);
+        EsconderTodos();
+        painelCriarModificacoes.SetActive(true);
     }
 
     public void AbrirTelaSelecionarPersonagem()
     {
-        telaPrincipal.SetActive(false);
-        telaSelecionarPersonagem.SetActive(true);
+        EsconderTodos();
+        painelSelecionarPersonagem.SetActive(true);
     }
 }
