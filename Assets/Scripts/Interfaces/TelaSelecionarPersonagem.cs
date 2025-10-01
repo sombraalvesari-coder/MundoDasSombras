@@ -1,14 +1,14 @@
 using UnityEngine;
 
 /// <summary>
-/// Tela para seleção de personagem (placeholder).
+/// Controla as ações dentro da tela de seleção de personagem.
 /// </summary>
 public class TelaSelecionarPersonagem : MonoBehaviour
 {
     public GerenciadorLogin gerenciador;
 
-    public void BotaoVoltar()
+    public void VoltarParaTelaPrincipal()
     {
-        gerenciador.MostrarTelaPrincipal();
+        gerenciador.AbrirTelaPrincipal();
     }
 }

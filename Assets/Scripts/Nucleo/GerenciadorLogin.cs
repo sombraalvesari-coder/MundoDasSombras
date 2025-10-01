@@ -1,31 +1,15 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controla a exibição dos painéis da tela de login.
 /// </summary>
 public class GerenciadorLogin : MonoBehaviour
 {
-    public GameObject telaPrincipal;
-    public GameObject telaCarregarMundo;
-    public GameObject telaModificacoes;
-    public GameObject telaSelecionarPersonagem;
-
-    /// <summary>
-    /// Exibe apenas a tela principal.
-    /// </summary>
-    void Start()
-    {
-        MostrarTelaPrincipal();
-    }
-
-    public void MostrarTelaPrincipal()
-    {
-        telaPrincipal.SetActive(true);
-        telaCarregarMundo.SetActive(false);
-        telaModificacoes.SetActive(false);
-        telaSelecionarPersonagem.SetActive(false);
-    }
+    [Header("Referências dos Painéis")]
+    public GameObject painelTelaPrincipal;
+    public GameObject painelCarregarMundo;
+    public GameObject painelCriarModificacoes;
+    public GameObject painelSelecionarPersonagem;
 
     /// <summary>
     /// Esconde todos os painéis.
