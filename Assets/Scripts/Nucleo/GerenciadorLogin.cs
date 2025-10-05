@@ -10,6 +10,8 @@ public class GerenciadorLogin : MonoBehaviour
     public GameObject painelCarregarMundo;
     public GameObject painelCriarModificacoes;
     public GameObject painelSelecionarPersonagem;
+    public GameObject PainelConfigurar;
+    public GameObject PainelCriarMundo;
 
     /// <summary>
     /// Esconde todos os painéis.
@@ -20,6 +22,8 @@ public class GerenciadorLogin : MonoBehaviour
         painelCarregarMundo.SetActive(false);
         painelCriarModificacoes.SetActive(false);
         painelSelecionarPersonagem.SetActive(false);
+        PainelConfigurar.SetActive(false);
+        PainelCriarMundo.SetActive(false);
     }
 
     public void AbrirTelaPrincipal()
@@ -44,5 +48,23 @@ public class GerenciadorLogin : MonoBehaviour
     {
         EsconderTodos();
         painelSelecionarPersonagem.SetActive(true);
+    }
+
+    public void AbrirTelaConfiguracao()
+    {
+        EsconderTodos();
+        PainelConfigurar.SetActive(true);
+    }
+
+    public void AbrirModalCriarMundo() 
+    { 
+        EsconderTodos();
+        painelCarregarMundo.SetActive(true);
+        PainelCriarMundo.SetActive(true); 
+    }
+    
+    public void FecharModalCriarMundo()
+    {
+        PainelCriarMundo.SetActive(false);
     }
 }
